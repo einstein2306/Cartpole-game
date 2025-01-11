@@ -1,0 +1,38 @@
+html{
+    overflow-x: hidden;
+}
+header,footer{
+    width:100%;
+    background-color: lightgray;
+}
+
+header,nav{
+    display:flex;
+    padding : 15px;
+    gap:40px;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+header nav a{
+    text-decoration: none;
+    color: black;
+}
+header nav a:hover{
+    color:blue;
+}
+body{
+    text-align: center;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+footer{
+    padding:10px;
+    position:absolute;
+    text-align: center;
+    bottom:0;
+}
+
+main{
+    padding:200px;
+}
