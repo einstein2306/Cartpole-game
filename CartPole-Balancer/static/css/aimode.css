@@ -32,6 +32,11 @@ body{
 
  }
 
+ .t-anim button{
+    margin-right: 20px;
+    font-size: 20px;
+ }
+
  
  #reload{
     right:5%;
