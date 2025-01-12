@@ -19,8 +19,19 @@
     </header>
     <main class="details">
         <h4>Cart Pole</h4>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <video  width="200" height="120" autoplay loop muted>
+                <source src="/static/video/cp.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+       
         <div class="desc">
-            <p>This envronment is part of the classic control environments.</p>
+            <p>This environment is part of the classic control environments. Here the goal is to keep the Pole
+                upright position by moving the cart left and right. It need some parameters to consider. They belongs to 
+                Cart and Pole. Those are the <span style="font-weight:100">(4,)</span> observations and 
+                <span style="font-weight:100;">(2,)</span> actions.
+            </p>
             <table class="table table-bordered table-striped table-sm mx-auto" style="width:60%;">
                 <thead>
                     <tr>
