@@ -1,5 +1,5 @@
 
-nav{
+header nav{
     display: flex;
     gap:30px;
     background-color: lightgray;
@@ -9,15 +9,16 @@ nav{
     justify-content: flex-end;
     width:100%;
     padding-right:7%;
+    z-index:1000;
 }
 
-nav a {
+header nav a {
     text-decoration: none;
     color:black;
     left:60%;
 }
 
-nav a:hover{
+header nav a:hover{
     color:blue;
 }
 
@@ -27,6 +28,29 @@ body{
     margin:0;
     padding:0;
 }
+
+.details{
+    margin:7px;
+    position: absolute;
+    top:70px;
+}
+.desc{
+    margin-left:20px;
+}
+.action-space{
+    margin-left:20px;
+}
+.obs-space{
+    margin-left:20px;
+}
+.reward{
+    margin-left:20px;
+}
+table{
+    text-align: center;
+}
+
+
 
 
 

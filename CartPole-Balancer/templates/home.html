@@ -9,18 +9,124 @@
     <title>Home</title>
 </head>
 <body>
-
-    <nav>
-        <a href="/Algorithm">Algorithm</a>
-        <a href="/AiMode">AI Mode</a>
-        <a href="/UserMode">User Mode</a>  
-        <a href="/About">About</a> 
-    </nav>
-
-    <p>
-        <h2>
-    </p>
-
+    <header>
+        <nav>
+            <a href="/Algorithm">Algorithm</a>
+            <a href="/AiMode">AI Mode</a>
+            <a href="/UserMode">User Mode</a>  
+            <a href="/About">About</a> 
+        </nav>
+    </header>
+    <main class="details">
+        <h4>Cart Pole</h4>
+        <div class="desc">
+            <p>This envronment is part of the classic control environments.</p>
+            <table class="table table-bordered table-striped table-sm mx-auto" style="width:60%;">
+                <thead>
+                    <tr>
+                        <th scope="col">Parameter</th>
+                        <th scope="col">Parameter Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Action Space</td>
+                        <td>Discrete(2)</td>
+                    </tr>
+                    <tr>
+                        <td>Observation Shape</td>
+                        <td>(4,)</td>
+                    </tr>
+                    <tr>
+                        <td>Action High</td>
+                        <td>[4.8 inf 0.42 inf]</td>
+                    </tr>
+                    <tr>
+                        <td>Observation Low</td>
+                        <td>[-4.8 -inf -0.42 -inf]</td>
+                    </tr>
+                    <tr>
+                        <td>Import</td>
+                        <td style="font-weight:100;">gym.make("CartPole-v1")</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br>
+        <h4>Action Space</h4>
+        <div class="action-space">
+            <p>The action space is <span style="font-weight:100;">ndarry</span> with shape <span style="font-weight:100">(1,)
+                </span> which can take values <span style="font-weight:100;">{0, 1}</span> indicating the 
+                direction of the fixed force the cart is pushed with.
+            </p>
+            <table class="table table-bordered table-striped table-sm mx-auto" style="width:60%;">
+                <thead>
+                    <tr>
+                        <th scope="col">Number</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>Push cart to the left</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Push cart to the right</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br>
+        <h4>Observation Space</h4>
+        <div class="obs-space">
+            <p>The observation is a <span style="font-weight:100">ndarry</span> with shape <span style="font-weight:100">(4,)</span>
+                with the values corresponding to the following postions and velocities.
+            </p>
+            <table class="table table-bordered table-striped table-sm mx-auto" style="width:60%;">
+                <thead>
+                    <tr>
+                        <th>Num</th>
+                        <th>Observation</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>Cart Position</td>
+                        <td>-4.8</td>
+                        <td>4.8</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Cart Velocity</td>
+                        <td>-inf</td>
+                        <td>inf</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pole Angle</td>
+                        <td>~ -0.418<br>rad(-24&deg;)</td>
+                        <td>~ 0.418<br>rad(24&deg;)</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pole Angular Velocity</td>
+                        <td>-inf</td>
+                        <td>inf</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br>
+        <h4>Rewards</h4>
+        <div class="reward">
+            Since the goal is to keep the pole upright Position for as long as possible, a reward of
+             <span style="font-weight:100">+1</span> for every step taken, including the termination step, is allotted.
+             The threshold for rewards is 475 for v1.
+        </div>
+    </main>
+    
 </body>
 </html>
 
