@@ -6,7 +6,7 @@ header,footer{
     background-color: lightgray;
 }
 
-header,nav{
+header nav{
     display:flex;
     padding : 15px;
     gap:40px;
@@ -16,6 +16,8 @@ header,nav{
 header nav a{
     text-decoration: none;
     color: black;
+    margin-right:150px;
+    margin-top:30px;
 }
 header nav a:hover{
     color:blue;
@@ -33,6 +35,14 @@ footer{
     bottom:0;
 }
 
-main{
-    padding:170px;
+main h3{
+    padding:130px;
+    margin-left:300px;
+}
+
+#image{
+    display:flex;
+    margin-right:auto;
+    margin-left:80px;
+    background-color:transparent;
 }
