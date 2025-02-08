@@ -13,7 +13,6 @@ from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import DummyVecEnv
 #import numpy as np
 
-
 def CartpoleModel():
     env = gym.make("CartPole-v1",render_mode="rgb_array")
     env = Monitor(env)
