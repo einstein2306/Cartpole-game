@@ -57,24 +57,6 @@ def UserMode():
      return render_template("usermode.html")
 
 
-@socket.on("action")
-def step(data):
-    """
-    Perform a step in the environment based on the user's action.
-    """
-    action = 0 if data['action'] == "left" else 1  # Default to 0 if no action is provided
-    frame, done = game.step(action)
-    socket.emit('frame',{'frame':frame,'done':done})
-
-@socket.on("reset")
-def reset():
-    """
-    Reset the CartPole environment.
-    """
-    frame = game.reset()
-    socket.emit('frame',{'frame':frame,'done':False})
-
-
 
 
 
