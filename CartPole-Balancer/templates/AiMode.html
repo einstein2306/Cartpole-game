@@ -9,11 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Mode</title>
     <script>
-       
+        let counter = 0;
+        let scoreInterval;
         function startanimation() {
             
             document.getElementById('start-button').style.display = 'none'; 
+
+            const score = document.getElementById('score')
+            scoreInterval = setInterval(() => {
+                score.innerText = counter++;
+            }, 500);
             
+            score.value = counter++;
+    
             var gif_data = "{{gif_data}}" || "";
             if(gif_data){
                 document.getElementById('animation').src = `data:image/gif;base64,${gif_data}`; 
@@ -33,6 +41,8 @@
             socket.on("disconnect", function() { 
                 console.log("Disconnected from WebSocket"); // Debug print
             });
+
+
         }
     </script>
 
@@ -52,8 +62,11 @@
         <button class="btn btn-primary btn-sm" id="reset" onclick="window.location.reload();">stop</button>
         <br></br>
     </div>
+    <div class="score">
+        score:<span id="score">0</span>
+    </div>
     <div class="anim-box shadow-lg rounded">
-        <img id="animation"  class="img-fluid" alt="Animation" style="display:none;">
+        <img id="animation" alt="Animation" style="display:none;">
     </div> 
     <br><br>
 
