@@ -3,10 +3,13 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    
     <link href="/static/css/algorithm.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <h1>DQN Algorithm</h1>
@@ -67,10 +70,29 @@
         <li>Further Reference: <a href="https://www.nature.com/articles/nature14236" style="text-decoration: none;">https://www.nature.com/articles/nature14236</a></li>
         <li>Tutorial "From Tabular Q-Learning to DQN":  <a href="https://github.com/araffin/rlss23-dqn-tutorial" style="text-decoration:none">https://github.com/araffin/rlss23-dqn-tutorial</a></li>
     </ul>
+    <div>
+        <h5>Mathematical Description</h5>
+        <p style="text-indent:44px;">Reinforcement learning is based on the concept of rewards and penalties, where each action is associated with a value known as the Q-value. The Q-value can be computed using the Q-function. The discount factor, denoted as \( \gamma \), determines the importance of future rewards compared to immediate rewards.<br>
+            <div style="text-indent:40%;">
+                \( R_t = \sum_{k=0}^{\infty} \gamma^k r_{t+k} \)
+            </div>
+            Here, \( R_t \) represents the total reward at time step \( t \), and \( \gamma \) is the discount factor. The discounted reward can be expressed in an expanded form as follows:<br>
+            <div style="text-indent:40%;">
+                \( R_t = r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + \ldots \)
+            </div>
+            The Q-function, which is calculated based on the states \( s \) and actions \( a \) at each time step, estimates the optimal Q-values for each action. It does so by taking \( s \) and \( a \) as input values.<br>
+            <div style="text-indent:40%;">
+                \( Q(s, a) = \mathbb{E} [R_t | s_t, a_t] \)
+            </div>
+            The Q-function can be computed using the Bellman equation. The loss, denoted as \( L \), is calculated using the predicted Q-values and the best action for the next state. This loss is used to adjust the weights of the neural networks.<br>
+            <div style="text-indent:40%;">
+                \( L = \left\| r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right\|^2 \)
+            </div>
+        </p>
+    </div>
     
     <hr>
-        <p style="text-align: center;font-size: small;">copyright &copy; 2025</p>
-    
+    <p style="text-align: center;font-size: small;">copyright &copy; 2025</p>
 </body>
 </html>
-    
+

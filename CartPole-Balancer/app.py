@@ -20,7 +20,7 @@ def generate():
         while True:
              gif_data, len_frames = CartpoleModel()
              socket.emit("animation_gif",{"gif_data": gif_data})
-             time.sleep(10)
+             time.sleep(15)
 
 threading.Thread(target=generate,daemon=True).start()
 
