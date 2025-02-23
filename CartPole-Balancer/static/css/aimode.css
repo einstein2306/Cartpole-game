@@ -8,7 +8,11 @@
     position: absolute;
     bottom: 0;
     left:30%;
-    background-color:white;
+    background: linear-gradient(to bottom, white 89%,  #374151 11%);
+}
+
+#animation{
+   margin-top:15px;
 }
 
 body{
