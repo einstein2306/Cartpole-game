@@ -20,8 +20,8 @@ def CartpoleModel():
     model = DQN.load("logs/dqn/CartPole-v1_1/best_model.zip", env=env)
 
     frames=[]
-    
-    
+    #t = 0
+    #t_angle=[]
     
     for _ in range(1):
         obs = env.reset()
@@ -31,6 +31,8 @@ def CartpoleModel():
             action, _ = model.predict(obs,deterministic=False)
             obs,_ , done, _  = env.step(action)
             #angle = abs(obs[0][2])
+            #t_angle.append(angle)
+            #t = t+1
             
             frames.append(env.render())
         
@@ -45,8 +47,12 @@ def CartpoleModel():
     gif_data = base64.b64encode(buffer.read()).decode('utf-8')
         
     return gif_data , len(frames)
+    #return t_angle,t
 
 
+#l1,t = CartpoleModel()
+#print(l1)
+#print(t)
 
 """
 
