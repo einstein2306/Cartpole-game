@@ -72,7 +72,10 @@
     </ul>
     <div>
         <h5>Mathematical Description</h5>
-        <p style="text-indent:44px;">Reinforcement learning is based on the concept of rewards and penalties, where each action is associated with a value known as the Q-value. The Q-value can be computed using the Q-function. The discount factor, denoted as \( \gamma \), determines the importance of immediate rewards compared to future rewards. Means present rewards must be considered instead of future rewards.<br>
+        <p style="text-indent:44px;">Reinforcement learning is based on the concept of rewards and penalties, where each action is associated with a value known as the Q-value. The Q-value can be computed using the Q-function. The discount factor, denoted as \( \gamma \), determines the importance of immediate rewards compared to future rewards.
+             Means present rewards must be considered instead of future rewards. Based on the value of the discount factor the rewards will be considered.
+             if the value of \(\gamma \) is large value then it consider the future rewards also or if it is less means only consider the immediate rewards.
+             <br>
             <div style="text-indent:40%;">
                 \( R_t = \sum_{k=0}^{\infty} \gamma^k r_{t+k} \)
             </div>
