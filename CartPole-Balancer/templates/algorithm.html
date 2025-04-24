@@ -89,7 +89,7 @@
             </div>
             The Q-function can be computed using the Bellman equation. The loss, denoted as \( L \), is calculated using the predicted Q-values and the best action for the next state. This loss is used to adjust the weights of the neural networks.<br>
             <div style="text-indent:40%;">
-                \( L = \left\| r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right\|^2 \)
+                \( L = \mathbb{E} \left\| r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right\|^2 \)
             </div>
         </p>
     </div>

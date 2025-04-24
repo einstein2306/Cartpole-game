@@ -1,0 +1,13 @@
+gunicorn
+flask
+Flask-SocketIO
+stable_baselines3
+gymnasium
+gymnasium[classic-control]
+rl_zoo3
+torch
+pillow
+google-genai
+flask-session
+redis
+flask-cors

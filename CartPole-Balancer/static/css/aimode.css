@@ -1,18 +1,19 @@
-
 .anim-box{
     height:470px;
-    width: 601px;
+    width: 501px;
     justify-content: center;
     align-items: center;
     margin: 20px auto;
     position: absolute;
     bottom: 0;
-    left:30%;
+    left:32%;
     background: linear-gradient(to bottom, white 89%,  #374151 11%);
 }
 
 #animation{
-   margin-top:15px;
+   margin-top:25px;
+   height: 370px;
+   width: 500px;
 }
 
 body{
@@ -50,4 +51,40 @@ body{
  
  #reload{
     right:5%;
+ }
+
+ @media(max-width:768px){
+      .anim-box{
+         height: 400px;
+         width: 460px;
+         margin: 20px auto;
+         bottom: 0;
+         left:10%;
+         margin-top:3%;
+      }
+      #animation{
+         margin-top:2px;
+         height: 300px; /* Adjusted height */
+         width: 450px;  /* Adjusted width */
+         margin-left:5px;
+      }
+      .t-anim{
+         position:absolute;
+         left:5%;
+         bottom:-10%;
+         margin-bottom: 38%;
+      }
+      .t-anim button{
+         margin-right: 20px;
+         font-size: 15px;
+         margin-bottom:250px;
+         margin-left:28px;
+      }
+      .mess{
+         margin-bottom: 20%;
+         position:absolute;
+         bottom:0;
+         right:5%;
+      }
+
  }

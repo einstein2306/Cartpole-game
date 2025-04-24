@@ -46,3 +46,13 @@ main h3{
     margin-left:80px;
     background-color:transparent;
 }
+
+@media(max-width:768px){
+    main h3{
+        font-size:17px;
+        margin-left:50px;
+    }
+    nav a {
+        font-size:17px;
+    }
+}

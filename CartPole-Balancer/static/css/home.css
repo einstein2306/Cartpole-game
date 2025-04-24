@@ -50,6 +50,28 @@ table{
     text-align: center;
 }
 
+@media(max-width:768px){
+    header nav a {
+        font-size:14px;
+    }
+    .parameter{
+        width:50%;
+        height: 150px;
+        font-size:smaller;
+    }
+    table{
+        font-size:14px;
+    }
+    body{
+        font-size:medium;
+        font-family: sans-serif;
+
+    }
+
+}
+
+
+
 
 
 

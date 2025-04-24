@@ -12,3 +12,10 @@ table{
 ul{
     margin:30px;
 }
+
+@media(max-width:768px){
+    body{
+        font-size:13px;
+    }
+    
+}
