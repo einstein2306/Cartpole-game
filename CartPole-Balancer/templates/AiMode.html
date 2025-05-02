@@ -36,7 +36,6 @@
                 console.log("new data received..");
                 const element = document.getElementById("animation");
                 element.src = `data:image/gif;base64,${data.gif_data}`;
-            
             });
             socket.on("disconnect", function() { 
                 console.log("Disconnected from WebSocket"); // Debug print

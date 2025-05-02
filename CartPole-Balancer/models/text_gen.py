@@ -1,5 +1,5 @@
 from google import genai
-from google.genai import types
+from google.genai import types # type: ignore
 
 def generate_text(conversation):
     client = genai.Client(api_key="AIzaSyDsuhnfsd-nGjBSIQQL5wH3a8mnqAgVX_Q")
