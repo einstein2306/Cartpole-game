@@ -7,7 +7,4 @@ gymnasium[classic-control]
 rl_zoo3
 torch
 pillow
-google-genai
-flask-session
-redis
-flask-cors
+
